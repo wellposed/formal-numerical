@@ -19,6 +19,8 @@ record TupleProjection (rank : ℕ ) (shape : Vec ℕ rank) : Set  where
      -- proof that manifest entry count is ≤ product of the dimensions
      
      index2address :  DominatedTuple rank shape → Fin manifest
-     address2indes : Fin manifest -> DominatedTuple rank shape  
+     address2indes : Fin manifest -> DominatedTuple rank shape
+     -- this almost feels like cheating, checked tuples by construction!
+     -- also side steps strided addresses for now 
                          
      

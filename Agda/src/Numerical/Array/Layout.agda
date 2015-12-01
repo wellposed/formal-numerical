@@ -10,7 +10,7 @@ open import Relation.Binary.PropositionalEquality as PEq
 record DominatedTuple (rank : ℕ ) (shape : Vec ℕ rank) : Set where
   field
        domIx : Vec ℕ rank
-       domBounded : ∀ (pos : Fin rank) -> lookup pos domIx Data.Nat.≤ lookup pos shape 
+       .domBounded : ∀ (pos : Fin rank) -> lookup pos domIx Data.Nat.≤ lookup pos shape 
 
 record TupleProjection (rank : ℕ ) (shape : Vec ℕ rank) : Set  where
    field

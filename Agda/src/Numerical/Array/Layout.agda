@@ -14,12 +14,12 @@ record DominatedTuple (rank : ℕ ) (shape : Vec ℕ rank) : Set where
 
 record TupleProjection (rank : ℕ ) (shape : Vec ℕ rank) : Set  where
    field
-     manifest : ℕ 
+     manifest : ℕ -- could also define manifest : Fin (product (toList shape))
      feasibleCount : manifest Data.Nat.≤ (product (toList shape))
      -- proof that manifest entry count is ≤ product of the dimensions
      
      index2address :  DominatedTuple rank shape → Fin manifest
-     address2indes : Fin manifest -> DominatedTuple rank shape
+     address2index : Fin manifest -> DominatedTuple rank shape
      -- this almost feels like cheating, checked tuples by construction!
      -- also side steps strided addresses for now 
                          

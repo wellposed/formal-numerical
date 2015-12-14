@@ -1,2 +1,3 @@
 *.clean
 .#Layout.agda
+.#Layout.lean

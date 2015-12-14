@@ -31,8 +31,15 @@ record TupleLayout {c ℓ₁ ℓ₂ : Level } (rank : ℕ ) (shape : Vec ℕ ran
      {- 
        addr₁ ≤ addr₂ iff address2Index addr₁ ≤ address2Index addr₂ 
        with _ < _  iff _ < _ 
-       too
+       too!
 
+     question: what happens to the possible definitions of address2index and index2address if
+     we add this ordering requirement? eg, can i do some sort of "universal"
+     representation theorem in 1-2 dimensional cases given that info? 
+
+     1 dim should be "easy" or "possible"
+
+     2 dim will be a bit richer and 
      -}
 
      
